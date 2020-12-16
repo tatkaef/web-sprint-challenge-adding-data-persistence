@@ -9,7 +9,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     Resource.findResources()
     .then((resource)=>   {
-            res.status(200).json(resource)
+       res.status(200).json(resource)
     })
     .catch(error => {
       res.status(500).json({

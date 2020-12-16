@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
 router.get('/:id/', (req, res) => {
     const { id } = req.params;
   
-    Project.findTasks(id)
+    Project.findTasksById(id)
     .then(value => {
       res.status(200).json(value)
     })
